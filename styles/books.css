@@ -1,0 +1,87 @@
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 110px;
+  padding: 50px;
+  position: relative;
+}
+
+.main-content > div {
+  height: 350px;
+  background-color: var(--white-text);
+  color: var(--standard-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  /* padding: 20px; */
+}
+
+.main-content .content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 22px;
+}
+
+.main-content .content > .top {
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.main-content .content .middle .top {
+  width: 100%;
+  height: 75px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.author-section,
+.page-section {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.author,
+.pages {
+  justify-self: end;
+}
+
+label[for="description-box"] {
+  display: block;
+}
+
+.description-box {
+  width: 220px;
+  height: 115px;
+  background-color: white;
+  font-size: 0.82rem;
+  line-height: calc(1ex / 0.39);
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-left: 4px;
+}
+
+.delete {
+  /* background-color: var(--delete-color); */
+  color: var(--white-text);
+  font-size: 1.1rem;
+  width: 120px;
+  padding: 8px;
+  border-radius: 3px;
+}
+
+.delete:hover {
+  background-color: var(--delete-color);
+}
+
+.read {
+  display: flex;
+  align-items: center;
+}

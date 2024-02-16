@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/sidebar.css" />
+    <link rel="stylesheet" href="styles/books.css" />
+    <script
+      src="https://kit.fontawesome.com/478d3db66a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>My Library</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="content">
+        <div class="left">
+          <i class="fa-brands fa-pied-piper"></i>
+          <div class="title">My Library</div>
+        </div>
+        <div class="middle">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" class="search" placeholder="search for a book" />
+        </div>
+        <div class="right">
+          <i class="fa-regular fa-user" title="Your account"></i>
+          <!-- <div class="account" id="account">Account</div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="close">&#10005;</div>
+      <form action="" method="post">
+        <div>
+          <label for="title">Title</label>
+          <input
+            type="text"
+            id="title"
+            name="title-input"
+            placeholder="book title"
+            required
+          />
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input
+            type="text"
+            id="author"
+            name="author-input"
+            placeholder="author"
+            required
+          />
+        </div>
+        <div>
+          <label for="pages">Page number</label>
+          <input
+            type="number"
+            id="pages"
+            name="page-input"
+            placeholder="number of pages"
+            required
+          />
+        </div>
+        <div>
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="8"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <button class="submit" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="main-content">
+      <div>
+        <div class="content">
+          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
+          <div class="middle">
+            <div class="top">
+              <div class="author-section">
+                <div>Author:</div>
+                <div class="author">Douglas Adams</div>
+              </div>
+              <div class="page-section">
+                <div>Pages:</div>
+                <div class="author">3432 pages</div>
+              </div>
+            </div>
+            <div class="bottom">
+              <label for="description-box">Description</label>
+              <div class="description-box">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. velit
+                officiis reiciendis consequuntur. Explicabo, aspernatur soluta.
+              </div>
+              <div class="read">
+                <input type="checkbox" id="check" class="checked" />
+                <label for="read">read</label>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="content">
+          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
+          <div class="middle">
+            <div class="top">
+              <div class="author-section">
+                <div>Author:</div>
+                <div class="author">Douglas Adams</div>
+              </div>
+              <div class="page-section">
+                <div>Pages:</div>
+                <div class="author">3432 pages</div>
+              </div>
+            </div>
+            <div class="bottom">
+              <label for="description-box">Description</label>
+              <div class="description-box">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. velit
+                officiis reiciendis consequuntur. Explicabo, aspernatur soluta.
+              </div>
+              <div class="read">
+                <input type="checkbox" id="check" class="checked" />
+                <label for="read">read</label>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="content">
+          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
+          <div class="middle">
+            <div class="top">
+              <div class="author-section">
+                <div>Author:</div>
+                <div class="author">Douglas Adams</div>
+              </div>
+              <div class="page-section">
+                <div>Pages:</div>
+                <div class="author">3432 pages</div>
+              </div>
+            </div>
+            <div class="bottom">
+              <label for="description-box">Description</label>
+              <div class="description-box">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. velit
+                officiis reiciendis consequuntur. Explicabo, aspernatur soluta.
+              </div>
+              <div class="read">
+                <input
+                  type="checkbox"
+                  id="read"
+                  class="checked"
+                  onclick="readBook()"
+                />
+                <label for="">read</label>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="add">Add book</button>
+    <script src="javaScript/index.js"></script>
+    <script src="javaScript/events.js"></script>
+  </body>
+</html>

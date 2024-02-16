@@ -1,0 +1,62 @@
+:root {
+  --text-color: hsl(0, 0%, 17%);
+  --white-text: whitesmoke;
+  --delete-color: hsl(0, 100%, 56%);
+  --standard-color: hsl(218, 40%, 34%);
+  --hover-color: hsl(218, 40%, 30%);
+  --read-color: hsl(180, 100%, 94%);
+  --description-read: hsl(180, 90%, 100%);
+  --header-background: bisque;
+  --padding-left: 50px;
+  --padding-right: 50px;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 100;
+  background-color: var(--standard-color);
+}
+
+label {
+  font-size: 0.7rem;
+}
+
+.add {
+  position: fixed;
+  top: 18%;
+  right: 4%;
+  padding: 7px;
+  background-color: var(--standard-color);
+  color: white;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+
+i {
+  color: var(--standard-color);
+  cursor: pointer;
+}
+
+::placeholder {
+  font-family: sans-serif;
+  font-weight: 100;
+  opacity: 0.5;
+}
+
+i:hover {
+  color: var(--hover-color);
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
