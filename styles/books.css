@@ -66,10 +66,10 @@ label[for="description-box"] {
   border-radius: 4px;
   padding-top: 5px;
   padding-left: 4px;
+  word-wrap: break-word;
 }
 
 .delete {
-  /* background-color: var(--delete-color); */
   color: var(--white-text);
   font-size: 1.1rem;
   width: 120px;
