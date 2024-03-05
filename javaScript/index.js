@@ -1,5 +1,5 @@
 const myLibrary = [];
-
+console.log(myLibrary);
 
 class Book {
   constructor(title, author, pages, description) {
@@ -9,17 +9,6 @@ class Book {
     this.description = description;
   }
 }
-
-const dummyBook = new Book(
-  "Harry Potter",
-  "JK Rowling",
-  328,
-  "This book is about a wizard boy who attended wizard school and had normal childhood drama in and out of school."
-);
-
-myLibrary.push(dummyBook);
-
-console.log(myLibrary);
 
 function addBookToLibrary() {
   const titleInput = document.getElementById("title");
@@ -37,9 +26,6 @@ function addBookToLibrary() {
   descInput.value = "";
   myLibrary.push(book);
   renderHTML();
-  // document.querySelector(".sidebar").style = `
-  //   display: none;
-  //   `;
 }
 
 function renderHTML() {
@@ -81,4 +67,43 @@ function renderHTML() {
     bookHTML += html;
   });
   document.querySelector(".main-content").innerHTML = bookHTML;
-};
+}
+
+const contentArea = document.querySelector(".main-content");
+
+if (contentArea.innerHTML === "") {
+  contentArea.innerHTML = `
+      <div>
+        <div class="content">
+          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
+          <div class="middle">
+            <div class="top">
+              <div class="author-section">
+                <div>Author:</div>
+                <div class="author">Douglas Adams</div>
+              </div>
+              <div class="page-section">
+                <div>Pages:</div>
+                <div class="author">3432 pages</div>
+              </div>
+            </div>
+            <div class="bottom">
+              <label for="description-box">Description</label>
+              <div class="description-box">
+                Arthur Dent's cosmic journey, guided by an eccentric
+                hitchhiker, unravels absurdities, unveiling the ultimate
+                answer—42—in this satirical space adventure.
+              </div>
+              <div class="read">
+                <input type="checkbox" id="check" class="checked" />
+                <label for="read">read</label>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="delete">Delete</button>
+          </div>
+        </div>
+      </div>
+  `;
+}

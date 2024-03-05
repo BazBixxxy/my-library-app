@@ -26,14 +26,15 @@
         </div>
         <div class="right">
           <i class="fa-regular fa-user" title="Your account"></i>
-          <!-- <div class="account" id="account">Account</div> -->
+          <div class="account" id="account">Account</div>
+          <i class="fa-solid fa-angle-down"></i>
         </div>
       </div>
     </div>
 
     <div class="sidebar">
       <div class="close">&#10005;</div>
-      <form action="" method="post">
+      <form id="form" onsubmit="console.log('hi')">
         <div>
           <label for="title">Title</label>
           <input
@@ -41,6 +42,7 @@
             id="title"
             name="title-input"
             placeholder="book title"
+            minlength="5"
             required
           />
         </div>
@@ -71,6 +73,8 @@
             id="description"
             cols="30"
             rows="8"
+            minlength="50"
+            maxlength="175"
             required
           ></textarea>
         </div>
@@ -79,107 +83,7 @@
         </div>
       </form>
     </div>
-
-    <div class="main-content">
-      <div>
-        <div class="content">
-          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
-          <div class="middle">
-            <div class="top">
-              <div class="author-section">
-                <div>Author:</div>
-                <div class="author">Douglas Adams</div>
-              </div>
-              <div class="page-section">
-                <div>Pages:</div>
-                <div class="author">3432 pages</div>
-              </div>
-            </div>
-            <div class="bottom">
-              <label for="description-box">Description</label>
-              <div class="description-box">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. velit
-                officiis reiciendis consequuntur. Explicabo, aspernatur soluta.
-              </div>
-              <div class="read">
-                <input type="checkbox" id="check" class="checked" />
-                <label for="read">read</label>
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <button class="delete">Delete</button>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="content">
-          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
-          <div class="middle">
-            <div class="top">
-              <div class="author-section">
-                <div>Author:</div>
-                <div class="author">Douglas Adams</div>
-              </div>
-              <div class="page-section">
-                <div>Pages:</div>
-                <div class="author">3432 pages</div>
-              </div>
-            </div>
-            <div class="bottom">
-              <label for="description-box">Description</label>
-              <div class="description-box">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. velit
-                officiis reiciendis consequuntur. Explicabo, aspernatur soluta.
-              </div>
-              <div class="read">
-                <input type="checkbox" id="check" class="checked" />
-                <label for="read">read</label>
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <button class="delete">Delete</button>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="content">
-          <div class="top book-title">Hitchhiker's Guide To The Galaxy</div>
-          <div class="middle">
-            <div class="top">
-              <div class="author-section">
-                <div>Author:</div>
-                <div class="author">Douglas Adams</div>
-              </div>
-              <div class="page-section">
-                <div>Pages:</div>
-                <div class="author">3432 pages</div>
-              </div>
-            </div>
-            <div class="bottom">
-              <label for="description-box">Description</label>
-              <div class="description-box">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. velit
-                officiis reiciendis consequuntur. Explicabo, aspernatur soluta.
-              </div>
-              <div class="read">
-                <input
-                  type="checkbox"
-                  id="read"
-                  class="checked"
-                  onclick="readBook()"
-                />
-                <label for="">read</label>
-              </div>
-            </div>
-          </div>
-          <div class="bottom">
-            <button class="delete">Delete</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="main-content"></div>
     <button class="add">Add book</button>
     <script src="javaScript/index.js"></script>
     <script src="javaScript/events.js"></script>

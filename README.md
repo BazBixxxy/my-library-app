@@ -4,12 +4,18 @@ This is an exercise from the javaScript course in Odin
 
 - In this feature instead of using the object constructor function, we used have used a class constructor to create the books
 
-Issues:
 
-> The event listener for changing the background of the book card on checking the "read" mark only works for the first element despite trying to debug it for a day.
+> Fixes
 
-> I need to figure out a way to close the sidebar on submitting the form
+Added the necessary back-drop filters to the app
 
-> I need to figure out a way to reject an empty form input
+fixed the text overflow using: [word-wrap: break-word] on the description box.
 
-> The backdrop filter is not compatible with safari
+fixed the form to flow the input rules when submitting data using the submit event listener and inside it [event.preventDefault();]
+
+
+> Improvement
+
+Add a backend where people can upload books
+
+add a schema through which people can create accounts

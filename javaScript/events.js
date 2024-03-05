@@ -2,42 +2,27 @@ document.querySelector(".close").addEventListener("click", () => {
   document.querySelector(".sidebar").style = `
     display: none;
     `;
+  document.querySelector(".header").style = `
+    filter: none;
+  `;
+  document.querySelector(".main-content").style = `
+    filter: none;
+  `;
 });
 
 document.querySelector(".add").addEventListener("click", () => {
   document.querySelector(".sidebar").style = `
-    display: block;
+    display: initial;
     `;
-});
-
-document.querySelector(".submit").addEventListener("click", () => {
-  addBookToLibrary();
-  setTimeout(() => {
-    document.querySelector(".sidebar").style = `
-    display: none;
-    `;
-  }, 2000);
+  document.querySelector(".header").style = `
+    filter: blur(3px);
+  `;
+  document.querySelector(".main-content").style = `
+    filter: blur(3px);
+  `;
 });
 
 const checkMark = document.getElementById("check");
-
-// document.getElementById("check").addEventListener("click", () => {
-//   if (checkMark.checked) {
-//     document.querySelector(".main-content > div").style = `
-//         background-color: var(--read-color);
-//         `;
-//     document.querySelector(".description-box").style = `
-//       background-color: var(--description-read);
-//       `;
-//   } else {
-//     document.querySelector(".main-content > div").style = `
-//         background-color: var(--white-text);
-//         `;
-//     document.querySelector(".description-box").style = `
-//       background-color: white;
-//       `;
-//   }
-// });
 
 const readBox = document.querySelector(".checked");
 
@@ -61,33 +46,46 @@ document.querySelectorAll(".checked").forEach((value) => {
   });
 });
 
-// function readBook() {
-//   const checkMark = document.getElementById("check");
-//   if (checkMark.checked) {
-//     document.querySelector(".main-content > div").style = `
-//         background-color: var(--read-color);
-//         `;
-//     document.querySelector(".description-box").style = `
-//       background-color: var(--description-read);
-//       `;
-//   } else {
-//     document.querySelector(".main-content > div").style = `
-//         background-color: var(--white-text);
-//         `;
-//     document.querySelector(".description-box").style = `
-//       background-color: white;
-//       `;
-//   }
-// }
-
 document.querySelector(".main-content").addEventListener("click", () => {
   document.querySelector(".sidebar").style = `
     display: none;
     `;
+  document.querySelector(".header").style = `
+    filter: none;
+  `;
+  document.querySelector(".main-content").style = `
+    filter: none;
+  `;
 });
 
 document.querySelector(".header").addEventListener("click", () => {
   document.querySelector(".sidebar").style = `
     display: none;
     `;
+  document.querySelector(".header").style = `
+    filter: none;
+  `;
+  document.querySelector(".main-content").style = `
+    filter: none;
+  `;
 });
+
+
+document.getElementById("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  addBookToLibrary();
+  document.querySelector(".sidebar").style = `
+      display: none;
+      `;
+  document.querySelector(".header").style = `
+      filter: none;
+    `;
+  document.querySelector(".main-content").style = `
+      filter: none;
+    `;
+});
+
+
+
+
+
