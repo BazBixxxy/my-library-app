@@ -1,4 +1,4 @@
-.header {
+header {
   background-color: var(--white-text);
   position: fixed;
   top: 0;
@@ -11,7 +11,7 @@
   z-index: 10;
 }
 
-.header .content {
+header .content {
   width: 100%;
   display: flex;
   align-items: center;
@@ -42,12 +42,12 @@
   align-items: center;
 }
 
-.fa-magnifying-glass {
+.header .fa-magnifying-glass {
   font-size: 1.5rem;
   margin-right: 30px;
 }
 
-.search {
+.header .search {
   width: 80%;
   min-width: 200px;
   max-width: 450px;
@@ -79,4 +79,62 @@
 .fa-angle-down {
   margin-left: 5px;
   margin-top: 5px;
+}
+
+/* phone designs */
+
+nav {
+  /* background-color: lightsalmon; */
+  background-color: var(--white-text);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px;
+  z-index: 20;
+}
+
+nav > .right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+aside {
+  /* background-color: blueviolet; */
+  background-color: var(--white-text);
+  position: fixed;
+  left: 0;
+  width: 250px;
+  padding-top: 30px;
+  height: 500px;
+  margin-top: 6px;
+  border-bottom-right-radius: 5px;
+  z-index: 10;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
+  color: var(--standard-color);
+  display: none;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: -150px;
+}
+
+aside > div {
+  display: flex;
+  gap: 1rem;
+  width: 80%;
+}
+
+aside i {
+  font-size: 1.5rem;
+  margin-right: 30px;
 }

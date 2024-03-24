@@ -11,11 +11,25 @@
   --padding-right: 50px;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: hsl(0, 0%, 17%);
+    --white-text: whitesmoke;
+    --delete-color: hsl(0, 100%, 56%);
+    --standard-color: hsl(218, 40%, 34%);
+    --hover-color: hsl(218, 40%, 30%);
+    --read-color: hsl(180, 100%, 94%);
+    --description-read: hsl(180, 90%, 100%);
+    --header-background: bisque;
+  }
+}
+
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
   font-weight: 100;
+  overflow-x: hidden;
 }
 
 button {
@@ -33,8 +47,8 @@ label {
 
 .add {
   position: fixed;
-  top: 18%;
-  right: 4%;
+  top: 130px;
+  right: 50px;
   padding: 7px;
   background-color: var(--standard-color);
   color: white;

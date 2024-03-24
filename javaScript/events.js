@@ -70,7 +70,6 @@ document.querySelector(".header").addEventListener("click", () => {
   `;
 });
 
-
 document.getElementById("form").addEventListener("submit", (event) => {
   event.preventDefault();
   addBookToLibrary();
@@ -83,9 +82,31 @@ document.getElementById("form").addEventListener("submit", (event) => {
   document.querySelector(".main-content").style = `
       filter: none;
     `;
+  document.querySelector("aside").style = `
+    display: none;
+  `;
 });
 
+document.querySelector(".add-book").addEventListener("click", () => {
+  document.querySelector(".sidebar").style = `
+    display: initial;
+    `;
+  document.querySelector(".header").style = `
+    filter: blur(3px);
+  `;
+  document.querySelector(".main-content").style = `
+    filter: blur(3px);
+  `;
+  document.querySelector("aside").style = `
+    display: none;
+  `;
+});
 
+const phoneSideBar = document.querySelector("aside");
+document.querySelector(".fa-bars").addEventListener("click", () => {
+  phoneSideBar.style.display = "flex";
+});
 
-
-
+document.querySelector(".close-button").addEventListener("click", () => {
+  phoneSideBar.style.display = "none";
+});
